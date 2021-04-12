@@ -1,11 +1,11 @@
-class BandsController < ApplicationController
+class Api::V1::BandsController < ApplicationController
   before_action :set_band, only: [:show, :update, :destroy]
 
   # GET /bands
   def index
     @bands = Band.all
 
-    render json: @bands, only: [:name]
+    render json: @bands
   end
 
   # GET /bands/1
